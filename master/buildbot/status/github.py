@@ -214,3 +214,6 @@ class GitHubStatus(StatusReceiverMultiService):
         d.addCallback(lambda result: log.msg(success_message))
         d.addErrback(lambda failure: log.err(failure, error_message))
         return d
+
+    def stepStarted(self, build, step):
+        return
